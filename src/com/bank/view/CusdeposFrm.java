@@ -65,13 +65,13 @@ public class CusdeposFrm extends JInternalFrame {
 		setTitle("Deposit");
 		setBounds(100, 100, 493, 379);
 		
-		JLabel ckjeLabel = new JLabel("\u5B58\u6B3E\u91D1\u989D\uFF1A");
+		JLabel ckjeLabel = new JLabel("Amount");
 		ckjeLabel.setFont(new Font("Arial", Font.PLAIN, 18));
 		
-		JLabel ckkhLabel = new JLabel("\u5B58\u6B3E\u5361\u53F7\uFF1A");
+		JLabel ckkhLabel = new JLabel("Card Number");
 		ckkhLabel.setFont(new Font("Arial", Font.PLAIN, 18));
 		
-		JButton tijiaoButton = new JButton("\u63D0  \u4EA4");
+		JButton tijiaoButton = new JButton("Submit");
 		tijiaoButton.setIcon(new ImageIcon(CusdeposFrm.class.getResource("/images/Security - Admin.png")));
 		tijiaoButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -80,7 +80,7 @@ public class CusdeposFrm extends JInternalFrame {
 		});
 		tijiaoButton.setFont(new Font("Arial", Font.PLAIN, 18));
 		
-		JButton resetButton = new JButton("\u91CD  \u7F6E");
+		JButton resetButton = new JButton("Reset");
 		resetButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				resetValueActionPerformed(e);
@@ -89,7 +89,7 @@ public class CusdeposFrm extends JInternalFrame {
 		resetButton.setIcon(new ImageIcon(CusdeposFrm.class.getResource("/images/reset.png")));
 		resetButton.setFont(new Font("Arial", Font.PLAIN, 18));
 		
-		JLabel ckjeLabel_1 = new JLabel("\u5B58\u6B3E\u6237\u540D\uFF1A");
+		JLabel ckjeLabel_1 = new JLabel("Name");
 		ckjeLabel_1.setFont(new Font("Arial", Font.PLAIN, 18));
 		
 		idcard = customer.getCuIDCard();
@@ -106,7 +106,7 @@ public class CusdeposFrm extends JInternalFrame {
 		ckhmtextField.setColumns(10);
 		ckhmtextField.setText(customer.getCuName());
 		
-		JLabel beizhuLabel = new JLabel("\u5907    \u6CE8\uFF1A");
+		JLabel beizhuLabel = new JLabel("Remark");
 		beizhuLabel.setFont(new Font("Arial", Font.PLAIN, 18));
 		
 		beizhutextField = new JTextField();

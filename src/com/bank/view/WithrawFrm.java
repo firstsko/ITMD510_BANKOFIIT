@@ -65,16 +65,16 @@ public class WithrawFrm extends JInternalFrame {
 		JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel = new JLabel("\u53D6\u6B3E\u5BA2\u6237\uFF1A");
+		JLabel lblNewLabel = new JLabel("Withdraw Client");
 		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 16));
 		
-		JLabel lblNewLabel_1 = new JLabel("\u53D6\u6B3E\u8D26\u53F7\uFF1A");
+		JLabel lblNewLabel_1 = new JLabel("Withdraw Account");
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 16));
 		
-		JLabel lblNewLabel_2 = new JLabel("\u53D6\u6B3E\u91D1\u989D\uFF1A");
+		JLabel lblNewLabel_2 = new JLabel("Withdraw Amount");
 		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 16));
 		
-		JLabel lblNewLabel_3 = new JLabel("\u5907    \u6CE8\uFF1A");
+		JLabel lblNewLabel_3 = new JLabel("Remark");
 		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 16));
 		
 		idcard = customer.getCuIDCard();
@@ -98,7 +98,7 @@ public class WithrawFrm extends JInternalFrame {
 		qkbztextField.setColumns(10);
 		
 		
-		JButton btnNewButton = new JButton("\u63D0  \u4EA4");
+		JButton btnNewButton = new JButton("Submit");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				customdepoAddActionPerformed(e);
@@ -107,7 +107,7 @@ public class WithrawFrm extends JInternalFrame {
 		btnNewButton.setIcon(new ImageIcon(WithrawFrm.class.getResource("/images/Security - Admin.png")));
 		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 16));
 		
-		JButton btnNewButton_1 = new JButton("\u91CD  \u7F6E");
+		JButton btnNewButton_1 = new JButton("Reset");
 		btnNewButton_1.setFont(new Font("Arial", Font.PLAIN, 16));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
