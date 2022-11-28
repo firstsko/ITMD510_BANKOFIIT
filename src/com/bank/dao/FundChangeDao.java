@@ -20,7 +20,7 @@ public class FundChangeDao {
 	 * @throws Exception
 	 */
 	public int add(Connection con,FundChange fundChange)throws Exception{
-		String sql="insert into fund_change (fu_cName,fu_cIDCard,fu_cAccount,"
+		String sql="insert into huitu_fund_change (fu_cName,fu_cIDCard,fu_cAccount,"
 				+ "fu_cTAccount,fu_cMoney,fu_cOperationcode,fu_cState,fu_cRemark)"
 				+ " values(?,?,?,?,?,?,?,?)";
 		PreparedStatement pstmt=con.prepareStatement(sql);
