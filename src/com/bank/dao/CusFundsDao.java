@@ -17,7 +17,7 @@ public class CusFundsDao {
 	 * @throws Exception
 	 */
 	public int noraddupdate(Connection con,double balance,String AccoutID)throws Exception{
-		String sql="update customer_funds set TotalFunds=TotalFunds-? where cu_fAccount=?";
+		String sql="update huitu_customer_funds set TotalFunds=TotalFunds-? where cu_fAccount=?";
 		PreparedStatement pstmt=con.prepareStatement(sql);
 		pstmt.setDouble(1,balance);
 		pstmt.setString(2,AccoutID);
@@ -32,7 +32,7 @@ public class CusFundsDao {
 	 * @throws Exception
 	 */
 	public int norsubupdate(Connection con,double balance,String AccoutID)throws Exception{
-		String sql="update customer_funds set TotalFunds=TotalFunds+? where cu_fAccount=?";
+		String sql="update huitu_customer_funds set TotalFunds=TotalFunds+? where cu_fAccount=?";
 		PreparedStatement pstmt=con.prepareStatement(sql);
 		pstmt.setDouble(1,balance);
 		pstmt.setString(2,AccoutID);
@@ -67,7 +67,7 @@ public class CusFundsDao {
 	 * @throws Exception
 	 */
 	public int frozeupdate(Connection con,CusFunds cusFunds)throws Exception{
-		String sql="update customer_funds set TotalFunds=?,FrozenCapital=? where cu_fAccount=?";
+		String sql="update huitu_customer_funds set TotalFunds=?,FrozenCapital=? where cu_fAccount=?";
 		PreparedStatement pstmt=con.prepareStatement(sql);
 		pstmt.setDouble(1,0.00);
 		pstmt.setDouble(2,cusFunds.getTotalFunds());
