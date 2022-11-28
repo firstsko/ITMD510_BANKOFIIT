@@ -43,7 +43,7 @@ public class TrinterDao {
 	 * @throws Exception
 	 */
 	public ResultSet list(Connection con,Trinter trinter)throws Exception{
-		StringBuffer sb=new StringBuffer("select * from huitu_transfer_interface ti,bankinfo bi where ti.tr_iBank=bi.bankNum");
+		StringBuffer sb=new StringBuffer("select * from huitu_transfer_interface ti,huitu_bankinfo bi where ti.tr_iBank=bi.bankNum");
 		System.out.println(sb);
 		if(StringUtil.isNotEmpty(trinter.getTr_iAccount())){
 			sb.append(" and ti.tr_iAccount = '"+trinter.getTr_iAccount()+"'");
