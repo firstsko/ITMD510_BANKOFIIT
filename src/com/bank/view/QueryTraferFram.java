@@ -116,7 +116,7 @@ public class QueryTraferFram extends JInternalFrame {
 		btnNewButton.setIcon(new ImageIcon(QueryTraferFram.class.getResource("/images/Misc - search.png")));
 		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 12));
 		
-		JLabel lblNewLabel_2 = new JLabel("\u94F6\u884C\u7F16\u53F7\uFF1A");
+		JLabel lblNewLabel_2 = new JLabel("Bank Code");
 		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 18));
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(

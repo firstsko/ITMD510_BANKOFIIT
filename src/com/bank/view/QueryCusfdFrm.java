@@ -260,7 +260,6 @@ public class QueryCusfdFrm extends JInternalFrame {
 	}
 	
 	/**
-	 * 表格行点击事件处理
 	 * @param e
 	 */
 	private void cusfdstableMousePressed(MouseEvent evt) {
@@ -272,7 +271,6 @@ public class QueryCusfdFrm extends JInternalFrame {
 	}
 
  	/**
-	 * 客户资金查询搜索事件处理
 	 * @param evt
 	 */
 	private void cusfundsSearchActionPerformed(ActionEvent evt) {
@@ -283,7 +281,6 @@ public class QueryCusfdFrm extends JInternalFrame {
 	}
 	
 	/**
-	 * 初始化表格
 	 * @param bookType
 	 */
 	private void fillTable(CusFunds cusFunds){
@@ -314,7 +311,6 @@ public class QueryCusfdFrm extends JInternalFrame {
 	}
 	
 	/**
-	 * 冻结资金修改事件处理
 	 * @param evt
 	 */
 	private void frozenUpdateActionEvent(ActionEvent evt) {
@@ -337,21 +333,21 @@ public class QueryCusfdFrm extends JInternalFrame {
 		Connection con=null;
 		try{
 			if(Double.parseDouble(totaltextField)==0.00) {
-				JOptionPane.showMessageDialog(null, "冻结失败,可冻结金额不足");
+				JOptionPane.showMessageDialog(null, "1");
 			}else {
 			con=dbUtil.getCon();
 			int modifyNum=cusFundsDao.frozeupdate(con, cusFunds);
 			if(modifyNum==1){
-				JOptionPane.showMessageDialog(null, "冻结成功");
+				JOptionPane.showMessageDialog(null, "2");
 				this.resetValue();
 				this.fillTable(new CusFunds());
 			}else{
-				JOptionPane.showMessageDialog(null, "冻结失败,可冻结金额不足");
+				JOptionPane.showMessageDialog(null, "3");
 			}
 			}
 		}catch(Exception e){
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "冻结失败");
+			JOptionPane.showMessageDialog(null, "4");
 		}finally{
 			try {
 				dbUtil.closeCon(con);
@@ -362,7 +358,6 @@ public class QueryCusfdFrm extends JInternalFrame {
 		}
 	}
 	/**
-	 * 冻结资金修改事件处理
 	 * @param evt
 	 */
 	private void unfreUpdateActionEvent(ActionEvent evt) {
@@ -370,7 +365,7 @@ public class QueryCusfdFrm extends JInternalFrame {
 		String totaltextField=this.totaltextField.getText();
 		String frozetextField=this.frozetextField.getText();
 		if(StringUtil.isEmpty(accounttextField)){
-			JOptionPane.showMessageDialog(null, "请选择要解冻的卡号");
+			JOptionPane.showMessageDialog(null, "5");
 			return;
 		}
 		/*
@@ -385,21 +380,21 @@ public class QueryCusfdFrm extends JInternalFrame {
 		Connection con=null;
 		try{
 			if(Double.parseDouble(frozetextField)==0.00) {
-				JOptionPane.showMessageDialog(null, "可解冻资金为0?无需解冻");
+				JOptionPane.showMessageDialog(null, "6");
 			}else {
 			con=dbUtil.getCon();
 			int modifyNum=cusFundsDao.unfreupdate(con, cusFunds);
 			if(modifyNum==1){
-				JOptionPane.showMessageDialog(null, "解冻成功");
+				JOptionPane.showMessageDialog(null, "7");
 				this.resetValue();
 				this.fillTable(new CusFunds());
 			}else{
-				JOptionPane.showMessageDialog(null, "解冻失败");
+				JOptionPane.showMessageDialog(null, "8");
 			}
 			}
 		}catch(Exception e){
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "解冻失败");
+			JOptionPane.showMessageDialog(null, "9");
 		}finally{
 			try {
 				dbUtil.closeCon(con);
@@ -411,7 +406,6 @@ public class QueryCusfdFrm extends JInternalFrame {
 	}
 	
 	/**
-	 * 重置表单
 	 */
 	private void resetValue(){
 		this.accounttextField.setText("");

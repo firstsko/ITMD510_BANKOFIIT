@@ -3,8 +3,8 @@ package com.bank.model;
 public class BankInfo {
 	
 	private int id; // id
-	private String bankNum; // 银行编号
-	private String bankName; // 银行名称
+	private String bankNum;
+	private String bankName;
 	
 	public BankInfo() {
 		super();

@@ -89,7 +89,7 @@ public class CusoperaFrm extends JFrame {
 		deposButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CusdeposFrm cusdeposFrm=new CusdeposFrm(customer);
-				cusoperatable.add(cusdeposFrm);   //add在前否则子窗口无法置顶层
+				cusoperatable.add(cusdeposFrm);
 				cusdeposFrm.setVisible(true);
 			}
 		});

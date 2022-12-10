@@ -6,10 +6,10 @@ package com.bank.model;
  */
 public class Operator {
 	
-	private String id; // 编号
-	private String opName; // 用户名
-	private String opPassword; // 密码
-	private String department; // 部门
+	private String id;
+	private String opName;
+	private String opPassword;
+	private String department;
 
 	public Operator(String opName, String opPassword, String department) {
 		super();

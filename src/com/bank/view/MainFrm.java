@@ -15,6 +15,7 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Objects;
 
 public class MainFrm extends JFrame {
 
@@ -52,7 +53,7 @@ public class MainFrm extends JFrame {
 		JMenu mnNewMenu = new JMenu("Data Operation");
 		mnNewMenu.setForeground(new Color(255, 99, 71));
 		mnNewMenu.setFont(new Font("Arial", Font.PLAIN, 12));
-		mnNewMenu.setIcon(new ImageIcon(MainFrm.class.getResource("/images/base.png")));
+		mnNewMenu.setIcon(new ImageIcon(Objects.requireNonNull(MainFrm.class.getResource("/images/base.png"))));
 		menuBar.add(mnNewMenu);
 		
 		JMenu mnNewMenu_1 = new JMenu("Custom Business");
@@ -98,7 +99,6 @@ public class MainFrm extends JFrame {
 				table.add(traferFrm);
 			}
 		});
-
 
 		menuItem_2.setIcon(new ImageIcon(MainFrm.class.getResource("/images/add.png")));
 		mnNewMenu_2.add(menuItem_2);

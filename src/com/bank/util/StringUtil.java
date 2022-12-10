@@ -2,14 +2,12 @@ package com.bank.util;
 
 
 /**
- * 字符串工具类
  * @author Administrator
  *
  */
 public class StringUtil {
 
 	/**
-	 * 判断是否是空
 	 * @param str
 	 * @return
 	 */
@@ -34,7 +32,6 @@ public class StringUtil {
 
 
 	/**
-	 * 判断是否不是空
 	 * @param str
 	 * @return
 	 */

@@ -8,7 +8,6 @@ import com.bank.model.Trinter;
 import com.bank.util.StringUtil;
 
 /***
- * 转账接口Dao类
  * @author 
  *
  */
@@ -16,7 +15,6 @@ public class TrinterDao {
 	
 	
 	/**
-	 * 转账记录添加
 	 * @param con
 	 * @param trinter
 	 * @return
@@ -36,7 +34,6 @@ public class TrinterDao {
 	}
 	
 	/**
-	 * 转账 信息查询
 	 * @param con
 	 * @param 
 	 * @return

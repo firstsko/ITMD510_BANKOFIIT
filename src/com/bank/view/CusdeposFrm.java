@@ -174,11 +174,11 @@ public class CusdeposFrm extends JInternalFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("\u8BBE  \u7F6E");
+		JMenu mnNewMenu = new JMenu("Setting");
 		mnNewMenu.setIcon(new ImageIcon(CusdeposFrm.class.getResource("/images/base.png")));
 		menuBar.add(mnNewMenu);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("\u8FD4\u56DE",KeyEvent.VK_X);
+		JMenuItem mntmNewMenuItem = new JMenuItem("BACK TO TOP",KeyEvent.VK_X);
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
@@ -191,24 +191,23 @@ public class CusdeposFrm extends JInternalFrame {
 	}
 	
 	/**
-	 * ��Ӵ���¼�����
 	 * @param e
 	 */
 	private void customdepoAddActionPerformed(ActionEvent evt) {
 		String ckkhtextField=this.ckkhtextField.getText();
 	
 		String ckjetextField=new String(this.ckjetextField.getText());
-		System.out.println("��ʽ��ǰ��"+ckjetextField);
+		System.out.println("1"+ckjetextField);
 		Double ckjetextField2 = Double.parseDouble(ckjetextField);
-		System.out.println("��ʽ�����"+ckjetextField2);
+		System.out.println("2"+ckjetextField2);
 		
 		String ckhmtextField=new String(this.ckhmtextField.getText());
 		String beizhutextField=new String(this.beizhutextField.getText());
-		System.out.println("��ע��"+beizhutextField);
+		System.out.println("3"+beizhutextField);
 		String idcard=this.idcard;
-		System.out.println("���֤��"+idcard);
+		System.out.println("4"+idcard);
 		if(StringUtil.isEmpty(ckjetextField)){
-			JOptionPane.showMessageDialog(null, "������Ϊ�գ�");
+			JOptionPane.showMessageDialog(null, "5");
 			return;
 		}
 		FundChange fundChange=new FundChange(ckhmtextField,idcard,ckkhtextField,ckjetextField2,beizhutextField);
@@ -218,14 +217,14 @@ public class CusdeposFrm extends JInternalFrame {
 			int n=fundChangeDao.add(con, fundChange);
 			int m=cusFundsDao.norsubupdate(con, ckjetextField2, ckkhtextField);
 			if(n==1 && m==1){
-				JOptionPane.showMessageDialog(null, "���ɹ���");
+				JOptionPane.showMessageDialog(null, "Success");
 				resetValue();
 			}else{
-				JOptionPane.showMessageDialog(null, "���ʧ�ܣ�");
+				JOptionPane.showMessageDialog(null, "7");
 			}
 		}catch(Exception e){
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "���ʧ�ܣ�");
+			JOptionPane.showMessageDialog(null, "Error");
 		}finally{
 			try {
 				dbUtil.closeCon(con);

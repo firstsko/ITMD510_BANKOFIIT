@@ -188,24 +188,23 @@ public class WithrawFrm extends JInternalFrame {
 		this.qkbztextField.setText("");
 	}
 	/**
-	 * 耶紗贋錘並周侃尖
 	 * @param e
 	 */
 	private void customdepoAddActionPerformed(ActionEvent evt) {
 		String qkkhtextField=this.qkkhtextField.getText();
 	
 		String qkjetextField=this.qkjetextField.getText();
-		System.out.println("(函錘)鯉塀晒念署駆�"+qkjetextField);
+		System.out.println("1"+qkjetextField);
 		Double qkjetextField2 = Double.parseDouble(qkjetextField);
-		System.out.println("(函錘)鯉塀晒朔署駆�"+qkjetextField2);
+		System.out.println("2"+qkjetextField2);
 		
 		String qkzhtextField=this.qkzhtextField.getText();
 		String qkbztextField=this.qkbztextField.getText();
-		System.out.println("姥廣�"+qkbztextField);
+		System.out.println("3"+qkbztextField);
 		String idcard=this.idcard;
-		System.out.println("附芸屬�"+idcard);
+		System.out.println("4"+idcard);
 		if(StringUtil.isEmpty(qkjetextField)){
-			JOptionPane.showMessageDialog(null, "函錘署駆音嬬葎腎�");
+			JOptionPane.showMessageDialog(null, "5");
 			return;
 		}
 		FundChange fundChange=new FundChange(qkkhtextField,idcard,qkzhtextField,qkjetextField2,qkbztextField);
@@ -215,14 +214,14 @@ public class WithrawFrm extends JInternalFrame {
 			int n=fundChangeDao.qkadd(con, fundChange);
 			int m=cusFundsDao.noraddupdate(con,qkjetextField2,qkzhtextField);
 			if(n==1 && m==1){
-				JOptionPane.showMessageDialog(null, "函錘撹孔�");
+				JOptionPane.showMessageDialog(null, "Success");
 				resetValue();
 			}else{
-				JOptionPane.showMessageDialog(null, "函錘払移�");
+				JOptionPane.showMessageDialog(null, "7");
 			}
 		}catch(Exception e){
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "函錘払移�");
+			JOptionPane.showMessageDialog(null, "Balance is not enough");
 		}finally{
 			try {
 				dbUtil.closeCon(con);

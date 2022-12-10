@@ -2,13 +2,13 @@ package com.bank.model;
 
 public class Customer {
 	
-	private String cuName; // 用户名
-	private String cuPassword; // 密码
-	private String cuIDCard; // 身份证
-	private String cuAccount; //卡号
-	private String cuPhone; //手机
-	private String cuAddress; //地址
-	private String id; // 编号
+	private String cuName;
+	private String cuPassword;
+	private String cuIDCard;
+	private String cuAccount;
+	private String cuPhone;
+	private String cuAddress;
+	private String id;
 	
 	public Customer(String cuAccount, String cuPassword) {
 		super();

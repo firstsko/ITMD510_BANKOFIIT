@@ -54,7 +54,7 @@ public class TraferFrm extends JInternalFrame {
 		setClosable(true);
 		setBounds(100, 100, 500, 600);
 		
-		JLabel lblNewLabel = new JLabel("Account");
+		JLabel lblNewLabel = new JLabel("Source Account");
 		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 12));
 		
 		JLabel lblNewLabel_1 = new JLabel("Target Account");
@@ -163,7 +163,7 @@ public class TraferFrm extends JInternalFrame {
 		String jetextField=this.jetextField.getText();
 		//金额格式化
 		Double jetextField2 = Double.parseDouble(jetextField);
-		System.out.println("格式化后金额?"+jetextField2);
+		System.out.println("Format Amount:"+jetextField2);
 		
 		if(!hktextField.equals("")){
 			if(!sktextField.equals("")){
@@ -171,23 +171,23 @@ public class TraferFrm extends JInternalFrame {
 			Connection con=null;
 			try{
 				con=dbUtil.getCon();
-				String str = JOptionPane.showInputDialog("请输入支付密码?");
+				String str = JOptionPane.showInputDialog("Please input account password");
 				Customer customer =cusVerifyDao.traVerify(con, hktextField);
 				
 				if (str.equals(customer.getCuPassword())){
 				int addNum=trinterDao.add(con, trinter, jetextField);
 				if(addNum==1){
-					JOptionPane.showMessageDialog(null, "转账成功?");
+					JOptionPane.showMessageDialog(null, "Transfer is done");
 					resetValue();
 				}else{
-					JOptionPane.showMessageDialog(null, "转账失败?");
+					JOptionPane.showMessageDialog(null, "Error");
 				}
 				}else {
-					JOptionPane.showMessageDialog(null,"您输入的密码不正确?");
+					JOptionPane.showMessageDialog(null,"Account Password is wrong");
 				}
 			}catch(Exception e){
 				e.printStackTrace();
-				JOptionPane.showMessageDialog(null, "转账失败?");
+				JOptionPane.showMessageDialog(null, "Canceled");
 			}finally{
 				try {
 					dbUtil.closeCon(con);
@@ -196,10 +196,10 @@ public class TraferFrm extends JInternalFrame {
 				}
 			}
 		}else {
-			JOptionPane.showMessageDialog(null, "收款卡号不能为空?");
+			JOptionPane.showMessageDialog(null, "Target Account can not be empty");
 		}
 		}else {
-			JOptionPane.showMessageDialog(null, "汇款卡号不能为空?");
+			JOptionPane.showMessageDialog(null, "Source Account can not be empty");
 		}
 		
 	}

@@ -4,9 +4,9 @@ public class CusFunds {
 	
 
 	private String id; // id
-	private String cu_fAccount; // 银行账号
-	private double TotalFunds; // 总资金
-	private double FrozenCapital; // 冻结金额
+	private String cu_fAccount;
+	private double TotalFunds;
+	private double FrozenCapital;
 	
 	
 	public CusFunds(String cu_fAccount, double totalFunds, double frozenCapital) {

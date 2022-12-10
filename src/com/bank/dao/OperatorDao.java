@@ -10,14 +10,12 @@ import com.bank.model.Operator;;
 
 
 /**
- * 用户Dao类
  * @author Administrator
  *
  */
 public class OperatorDao {
 
 	/**
-	 * 登录验证
 	 * @param con
 	 * @param user
 	 * @return

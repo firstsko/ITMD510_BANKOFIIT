@@ -10,7 +10,6 @@ import com.bank.util.StringUtil;
 public class BankInfoDao {
 	
 	/**
-	 * 查询银行编号集合
 	 * @param con
 	 * @param 
 	 * @return

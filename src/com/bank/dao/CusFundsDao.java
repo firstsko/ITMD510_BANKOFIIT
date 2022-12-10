@@ -10,7 +10,6 @@ import com.bank.util.StringUtil;
 public class CusFundsDao {
 	
 	/**
-	 * 更新账户资金?取款?
 	 * @param con
 	 * @param 
 	 * @return
@@ -25,7 +24,6 @@ public class CusFundsDao {
 	}
 	
 	/**
-	 * 更新账户资金?存款?
 	 * @param con
 	 * @param 
 	 * @return
@@ -41,7 +39,6 @@ public class CusFundsDao {
 	
 	
 	/**
-	 * 查询客户资金情况
 	 * @param con
 	 * @param cusFunds
 	 * @return
@@ -50,17 +47,14 @@ public class CusFundsDao {
 	public ResultSet list(Connection con,CusFunds cusFunds)throws Exception{
 		StringBuffer sb=new StringBuffer("select * from huitu_customer_funds");
 		if(StringUtil.isNotEmpty(cusFunds.getCu_fAccount())){
-			//先用and 为后续多个条件方便使用
 			sb.append(" and cu_fAccount ="+cusFunds.getCu_fAccount().trim()+"");
 		}
-		//替换语句 将and 处理转为where
 		PreparedStatement pstmt=con.prepareStatement(sb.toString().replaceFirst("and", "where"));
 		return pstmt.executeQuery();
 	}
 	
 	
 	/**
-	 * 冻结客户资金
 	 * @param con
 	 * @param cusFunds
 	 * @return
@@ -76,7 +70,6 @@ public class CusFundsDao {
 	}
 	
 	/**
-	 * 解冻客户资金
 	 * @param con
 	 * @param cusFunds
 	 * @return

@@ -6,14 +6,12 @@ import java.sql.PreparedStatement;
 import com.bank.model.FundChange;
 
 /**
- * 存款业务Dao
  * @author Administrator
  *
  */
 public class FundChangeDao {
 	
 	/**
-	 * 客户资金变更表添加(存款)
 	 * @param con
 	 * @param bookType
 	 * @return
